@@ -1,7 +1,6 @@
 #include<stdio.h>
 
-void main()
-{
+int main() {
     int n, i, j, temp, total = 0;
     float avg_wt, avg_tat;
     int at[20], bt[20], wt[20], tat[20];
@@ -10,8 +9,7 @@ void main()
     scanf("%d", &n);
 
     printf("\nEnter the arrival time and burst time for each process:\n");
-    for(i = 0; i < n; i++)
-    {
+    for(i = 0; i < n; i++) {
         printf("\nProcess %d\n", i+1);
         printf("Arrival Time: ");
         scanf("%d", &at[i]);
@@ -20,12 +18,9 @@ void main()
     }
 
     // Sorting the burst time in ascending order using selection sort
-    for(i = 0; i < n; i++)
-    {
- {
+    for(i = 0; i < n; i++) {
         int pos = i;
-        for(j = i+1; j < n; j++)
-        {
+        for(j = i+1; j < n; j++) {
             if(bt[j] < bt[pos])
                 pos = j;
         }
@@ -40,12 +35,11 @@ void main()
     }
 
     // Calculating waiting time and turnaround time
-    for(i = 0; i < n; i++)
-    {
+    for(i = 0; i < n; i++) {
         wt[i] = 0;
         tat[i] = 0;
 
- for(j = 0; j < i; j++)
+        for(j = 0; j < i; j++)
             wt[i] += bt[j];
 
         tat[i] = wt[i] + bt[i];
@@ -63,3 +57,6 @@ void main()
 
     printf("\nAverage Waiting Time: %f", avg_wt);
     printf("\nAverage Turnaround Time: %f", avg_tat);
+
+    return 0;
+}
