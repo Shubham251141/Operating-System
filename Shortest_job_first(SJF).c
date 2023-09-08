@@ -60,3 +60,31 @@ int main() {
 
     return 0;
 }
+
+///////////////////////////////////
+OUTPUT
+
+Enter the number of processes: 3
+
+Enter the arrival time and burst time for each process:
+
+Process 1
+Arrival Time: 2
+Burst Time: 4
+
+Process 2
+Arrival Time: 1
+Burst Time: 3
+
+Process 3
+Arrival Time: 4
+Burst Time: 6
+
+Process Arrival Time    Burst Time      Waiting Time    Turnaround Time
+P1              1               3               0               3
+P2              2               4               3               7
+P3              4               6               7               13
+
+Average Waiting Time: 7.666667
+Average Turnaround Time: 7.666667
+
