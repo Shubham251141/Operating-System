@@ -51,3 +51,25 @@ int main()
  
   return 0;
 }
+
+//////////////////////////////////////////////////////////
+OUTPUT
+
+Enter total no. of processes     3
+Enter Arrival Time and Burst Time  1 :4
+5
+Enter Arrival Time and Burst Time  2 :2
+3
+Enter Arrival Time and Burst Time  3 :4
+6
+Enter Time Quantum:     2
+
+
+Process |Turnaround Time|Waiting Time
+
+P[2]    |       7       |       4
+P[1]    |       8       |       3
+P[3]    |       10      |       4
+
+Average Waiting Time= 3.666667
+Avg Turnaround Time = 8.333333
